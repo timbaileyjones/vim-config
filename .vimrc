@@ -1,6 +1,7 @@
 execute pathogen#infect()
 syntax on
 set number
+set ruler
 set expandtab
 set tabstop=2
 set background=dark
