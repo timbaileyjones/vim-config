@@ -11,6 +11,7 @@ set background=dark
 set t_Co=256
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+filetype plugin on
 colorscheme solarized
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
