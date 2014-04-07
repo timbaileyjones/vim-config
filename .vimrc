@@ -13,6 +13,8 @@ set background=dark
 set t_Co=256
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+let g:airline_theme = 'airlineish'
+
 filetype plugin on
 filetype indent plugin on
 
