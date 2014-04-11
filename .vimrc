@@ -18,11 +18,19 @@ let g:airline_theme = 'airlineish'
 filetype plugin on
 filetype indent plugin on
 
+set mouse=a
+
 colorscheme solarized
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 let mapleader = ","
+
 nmap <leader>t :NERDTree<CR>
 nmap <leader>q :q<CR>
+
+nnoremap <leader>l $
+nnoremap <leader>h ^
+
+inoremap <leader>, <C-x><C-o>
