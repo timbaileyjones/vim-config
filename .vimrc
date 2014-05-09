@@ -27,7 +27,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 let mapleader = ","
 
-nmap <leader>t :NERDTree<CR>
+nmap <leader>t :NERDTreeToggle<CR>
 nmap <leader>q :q<CR>
 
 nnoremap <leader>l $
