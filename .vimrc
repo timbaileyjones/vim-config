@@ -34,3 +34,12 @@ nnoremap <leader>l $
 nnoremap <leader>h ^
 
 inoremap <leader>, <C-x><C-o>
+
+highlight GitGutterAdd ctermfg=White
+highlight GitGutterDelete ctermfg=White
+highlight GitGutterChange ctermfg=White
+
+highlight GitGutterAdd ctermbg=Green
+highlight GitGutterDelete ctermbg=Red
+highlight GitGutterChange ctermbg=Yellow
+
