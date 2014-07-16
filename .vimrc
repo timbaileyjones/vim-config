@@ -43,3 +43,5 @@ highlight GitGutterAdd ctermbg=Green
 highlight GitGutterDelete ctermbg=Red
 highlight GitGutterChange ctermbg=Yellow
 
+" Add this line if terminal doesn't support utf for NerdTree
+" let g:NERDTreeDirArrows=0
