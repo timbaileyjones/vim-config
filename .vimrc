@@ -31,7 +31,8 @@ set list
 let mapleader = ","
 
 nmap <leader>t :NERDTreeToggle<CR>
-nmap <leader>q :q<CR>
+nmap <leader>q :qa<CR>
+nmap <leader>e :tabedit %<CR>
 
 nnoremap <leader>l $
 nnoremap <leader>h ^
