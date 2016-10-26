@@ -20,7 +20,7 @@ filetype indent plugin on
 
 set mouse=a
 
-colorscheme solarized
+colorscheme slate
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -49,3 +49,5 @@ highlight GitGutterChange ctermbg=Yellow
 
 " Add this line if terminal doesn't support utf for NerdTree
 " let g:NERDTreeDirArrows=0
+"
+:vmap ,x :!tidy -q -i --show-errors 0<CR>
