@@ -69,9 +69,10 @@ set listchars=tab:⁀⁀
 
 let mapleader = ","  
 
-nmap <leader>N :NERDTreeToggle<CR>
+nmap <leader>y :NERDTreeToggle<CR>
 nmap <leader>C :chdir ~/git/connectui/connectui/src<CR>:NERDTreeCWD<CR>BO
 nmap <leader>S :chdir ~/git/safeconnect/safeconnect/src<CR>:NERDTreeCWD<CR>BO
+nmap <leader>N :chdir ~/git/newbie-node-playground<CR>:NERDTreeCWD<CR>BO
 
 nmap <leader>v :n ~/.vimrc<CR>
 nmap <leader>z :w<CR>:source ~/.vimrc<CR>
