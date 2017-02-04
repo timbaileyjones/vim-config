@@ -69,10 +69,10 @@ set listchars=tab:⁀⁀
 
 let mapleader = ","  
 
-nmap <leader>t :NERDTreeToggle<CR>
-"nmap <leader>e :tabedit %<CR>
-nmap <leader>c :chdir ~/git/connectui/connectui/src<CR>
-nmap <leader>s :chdir ~/git/safeconnect/safeconnect/src<CR>
+nmap <leader>N :NERDTreeToggle<CR>
+nmap <leader>C :chdir ~/git/connectui/connectui/src<CR>:NERDTreeCWD<CR>BO
+nmap <leader>S :chdir ~/git/safeconnect/safeconnect/src<CR>:NERDTreeCWD<CR>BO
+
 nmap <leader>v :n ~/.vimrc<CR>
 nmap <leader>z :w<CR>:source ~/.vimrc<CR>
 "nmap <leader>f :set guifont=*<CR>
