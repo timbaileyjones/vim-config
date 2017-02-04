@@ -4,7 +4,7 @@ set cursorline
 set modeline
 highlight cursorline NONE ctermbg=blue
 let g:netrw_listestyle=3
-set statusline+=%#warningmsg#
+set statusline=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set nospell
@@ -67,15 +67,22 @@ set listchars=tab:⁀⁀
 "setlocal listchars-=tab:⮀⮀,trail:¬
 "set list
 
-			let mapleader = ","  
+let mapleader = ","  
 
 nmap <leader>t :NERDTreeToggle<CR>
-nmap <leader>q :qa<CR>
-nmap <leader>e :tabedit %<CR>
+"nmap <leader>e :tabedit %<CR>
 nmap <leader>c :chdir ~/git/connectui/connectui/src<CR>
 nmap <leader>s :chdir ~/git/safeconnect/safeconnect/src<CR>
 nmap <leader>v :n ~/.vimrc<CR>
 nmap <leader>z :w<CR>:source ~/.vimrc<CR>
+"nmap <leader>f :set guifont=*<CR>
+nmap <leader>q :set guifont=Terminus\ 8<CR>
+nmap <leader>w :set guifont=Terminus\ 10<CR>
+nmap <leader>e :set guifont=Terminus\ 12<CR>
+nmap <leader>r :set guifont=Terminus\ 14<CR>
+nmap <leader>t :set guifont=Terminus\ 16<CR>
+nmap <leader>y :set guifont=Terminus\ 18<CR>
+nmap <leader>u :set guifont=Terminus\ 24<CR>
 
 nnoremap <leader>l $
 nnoremap <leader>h ^
