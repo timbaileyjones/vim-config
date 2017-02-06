@@ -75,6 +75,7 @@ set listchars+=tab:░░
 
 let mapleader = ","  
 
+
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>C :chdir ~/git/connectui/connectui/src<CR>:NERDTreeCWD<CR>BO
 nmap <leader>S :chdir ~/git/safeconnect/safeconnect/src<CR>:NERDTreeCWD<CR>BO
