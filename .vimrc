@@ -11,7 +11,7 @@ set nospell
 set fileformat=unix
 set number
 set ruler
-set expandtab
+set noexpandtab
 set tabstop=2
 set expandtab
 set shiftwidth=2
@@ -79,7 +79,8 @@ let mapleader = ","
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>C :chdir ~/git/connectui/connectui/src<CR>:NERDTreeCWD<CR>BO
 nmap <leader>S :chdir ~/git/safeconnect/safeconnect/src<CR>:NERDTreeCWD<CR>BO
-nmap <leader>N :chdir ~/git/newbie-node-playground<CR>:NERDTreeCWD<CR>BO
+nmap <leader>N :chdir ~/git/node-docker-poc<CR>:NERDTreeCWD<CR>BO
+
 
 nmap <leader>v :n ~/.vimrc<CR>
 nmap <leader>z :w<CR>:source ~/.vimrc<CR>
