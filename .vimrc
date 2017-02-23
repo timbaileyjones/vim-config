@@ -11,7 +11,7 @@ set nospell
 set fileformat=unix
 set number
 set ruler
-set expandtab
+set noexpandtab
 set tabstop=2
 set expandtab
 set shiftwidth=2
@@ -22,7 +22,12 @@ set nospell
 set t_Co=256
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+
 let g:airline_theme = 'airlineish'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 
 filetype plugin on
 filetype indent plugin on
@@ -48,14 +53,15 @@ colorscheme koehler
 "autocmd vimenter * i" !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-	scriptencoding=utf-8
+scriptencoding=utf-8
 set encoding=utf-8
 "set listchars="tab:⮀   ,trail:¬"
 set listchars=tab:>-,trail:¬
-set listchars=tab:⮀⮀
-set listchars=tab:_·
-set listchars=tab:__
-set listchars=tab:⁀⁀
+set listchars+=tab:_·
+set listchars+=tab:__
+set listchars+=tab:⁀⁀
+set listchars+=tab:⮀⮀
+set listchars+=tab:░░
 
 			"set listchars=tab:\u00B7,trail:¬
 "set listchars="eol:\u00b6,tab:|,trail:\u2022,extends:\u00bb,precedes:\u00ab,nbsp:\u00d7" 
@@ -69,10 +75,12 @@ set listchars=tab:⁀⁀
 
 let mapleader = ","  
 
+
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>C :chdir ~/git/connectui/connectui/src<CR>:NERDTreeCWD<CR>BO
 nmap <leader>S :chdir ~/git/safeconnect/safeconnect/src<CR>:NERDTreeCWD<CR>BO
-nmap <leader>N :chdir ~/git/newbie-node-playground<CR>:NERDTreeCWD<CR>BO
+nmap <leader>N :chdir ~/git/node-docker-poc<CR>:NERDTreeCWD<CR>BO
+
 
 nmap <leader>v :n ~/.vimrc<CR>
 nmap <leader>z :w<CR>:source ~/.vimrc<CR>
@@ -115,10 +123,10 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
   let g:ctrlp_custom_ignore = {
-	\'dir':  '\v[\/](target\|\.git|\.hg|\.svn)$',
-	\'file': '\v\(exe|so|dll|class|jar|war)$',
-	\'link': 'SOME_BAD_SYMBOLIC_LINKS',
-	\}
+     \'dir':  '\v[\/](target\|\.git|\.hg|\.svn)$',
+     \'file': '\v\(exe|so|dll|class|jar|war)$',
+     \'link': 'SOME_BAD_SYMBOLIC_LINKS',
+ \}
   set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*.jar,*.war,target/*,.git/*,.gif,.jpg,.jpeg,.png,.GIF,.JPG,.JPEG,.PNG,
 endif
 
