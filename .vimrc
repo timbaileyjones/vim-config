@@ -43,7 +43,7 @@ let g:syntastic_quiet_message = { "type": "style" }
 
 set mouse=a
 
-colorscheme slate
+colorscheme koehler
 "autocmd vimenter * NERDTree
 "autocmd vimenter * i" !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
