@@ -64,16 +64,16 @@ set listchars+=tab:⮀⮀
 set listchars+=tab:░░
 
 			"set listchars=tab:\u00B7,trail:¬
-"set listchars="eol:\u00b6,tab:|,trail:\u2022,extends:\u00bb,precedes:\u00ab,nbsp:\u00d7" 
+"set listchars="eol:\u00b6,tab:|,trail:\u2022,extends:\u00bb,precedes:\u00ab,nbsp:\u00d7"
 
 
 
 
-"setlocal list  
+"setlocal list
 "setlocal listchars-=tab:⮀⮀,trail:¬
 "set list
 
-let mapleader = ","  
+let mapleader = ","
 
 
 nmap <leader>n :NERDTreeToggle<CR>
@@ -95,6 +95,8 @@ nmap <leader>u :set guifont=Terminus\ 24<CR>
 
 nnoremap <leader>l $
 nnoremap <leader>h ^
+
+
 
 inoremap <leader>, <C-x><C-o>
 
@@ -133,3 +135,41 @@ endif
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 set runtimepath^=~/vim/buncle/ctrlp.vim
+
+"
+" NeoBundle configuration from here.
+" https://github.com/shougo/neobundle.vim
+"
+
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+" from nando
+autocmd BufWritePre * :%s/\s\+$//e
